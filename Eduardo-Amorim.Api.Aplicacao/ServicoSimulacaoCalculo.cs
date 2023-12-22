@@ -58,13 +58,13 @@ namespace Eduardo_Amorim.Api.Aplicacao
             switch (prazoEmMeses)
             {
                 case (<= 6):
-                    return valorDeCalculo - (valorDeCalculo * _tabelaBase.SeisMeses / 100);
+                    return lucroBruto - (valorDeCalculo * _tabelaBase.SeisMeses / 100);
                 case (<= 12):
-                    return valorDeCalculo - (valorDeCalculo * (_tabelaBase.DozeMeses / 100));
+                    return lucroBruto - (valorDeCalculo * (_tabelaBase.DozeMeses / 100));
                 case (<= 24):
-                    return valorDeCalculo - (valorDeCalculo * (_tabelaBase.VinteQuatroMeses / 100));
+                    return lucroBruto - (valorDeCalculo * (_tabelaBase.VinteQuatroMeses / 100));
                 default:
-                    return valorDeCalculo - (valorDeCalculo * (_tabelaBase.AcimaVinteQuatroMeses / 100));
+                    return lucroBruto - (valorDeCalculo * (_tabelaBase.AcimaVinteQuatroMeses / 100));
             }
         }
 
