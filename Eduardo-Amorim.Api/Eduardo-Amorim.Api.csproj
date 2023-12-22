@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>Eduardo_Amorim.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Eduardo-Amorim.Api.Aplicacao\Eduardo-Amorim.Api.Aplicacao.csproj" />
+    <ProjectReference Include="..\Eduardo-Amorim.Api.Model\Eduardo-Amorim.Api.Model.csproj" />
+  </ItemGroup>
+
+</Project>
