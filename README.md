@@ -7,7 +7,7 @@ Para facilitar o entendimento os Folders foram separados em: Aplicação, Domini
   * **Aplicação**: Serviços e acoplamento de regras de negócios para centralização (Conceito Domain-Driven Design *Vaughn Vernon*)
   * **Dominio**: Classes de transporte de Objetos, sendo inteiramente servidas só e somente a aplicação (famigerado DTO)
   * **Infraestrutura**: Referencia todas base do Projeto juntamente com componentes reutilizáveis tais como: Regras de HTTP, Exceptions tratados, Logs personalizadas, Configurações de Grafana, Google Dash ou DataDog, Configurações de Sensedia
-  * **Testes**: Camada de Testes unitários (Xunit, Moq, Moquito, .NetUnitTest...
+  * **Testes**: Camada de Testes unitários (Xunit, Moq, Moquito, .NetUnitTest...)
   * **UI**: Camada que promove as interações com serviços: EndPoints
   * *Dentro de UI existe um Lib especifica para conversão de Dominio em MODEL. Patterns mais comuns orientam a não servir ao Cliente / Usuário do sistema o mesmo objeto de Domino; ou seja: Todo DTO possui seu Model.*
 
