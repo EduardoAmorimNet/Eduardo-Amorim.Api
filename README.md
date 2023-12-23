@@ -27,3 +27,14 @@ public void IsPrime_ValuesLessThan2_ReturnFalse(int value)
 }
 
 Porém, a versão aplicada nesse projeto do Xunit com o Microsoft.VisualStudio.TestPlatform.MSTest não está permitindo usar essa prática, por esse motivo os testes foram implementados de maneira a chamadas únicas para cada método.
+
+
+*** ANGULAR ***
+
+A aplicação está rodando por default na porta: 4200
+Caso tenha você tenha alguma aplicação rodando nessa porta é necessário alterar a configuração do projeto para não gerar conflito.
+
+Para executar o projeto basta usar o comando: ng serve
+Caso queira executar direto no seu navegador padrão: ng serve --open
+
+Se em sua máquina estiver faltando alguma biblioteca basta usar o comando:npm install ou npm install --force
