@@ -1,6 +1,8 @@
 using Eduardo_Amorim.Api.Aplicacao;
 using Eduardo_Amorim.Api.Aplicacao.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
+[assembly: ExcludeFromCodeCoverage]
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
