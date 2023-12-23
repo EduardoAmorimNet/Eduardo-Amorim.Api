@@ -12,3 +12,18 @@ Para facilitar o entendimento os Folders foram separados em: Aplicação, Domini
   * *Dentro de UI existe um Lib especifica para conversão de Dominio em MODEL. Patterns mais comuns orientam a não servir ao Cliente / Usuário do sistema o mesmo objeto de Domino; ou seja: Todo DTO possui seu Model.*
 
 O Projeto está aplicado e executando na porta 44379, caso você possua alguma aplicação que trabalhe nesse porta, basta ir até: src/Eduardo-Amorim.Api/Properties/launchSettings.json e alterar o "sslPort" para uma porta de sua escolha.
+
+Observação: A biblioteca do Xunit permite usar teorias em métodos para simular diversos valores evitando o acoplamento em rodadas de testes, exemplo:
+
+[Theory]
+[InlineData(-1)]
+[InlineData(0)]
+[InlineData(1)]
+public void IsPrime_ValuesLessThan2_ReturnFalse(int value)
+{
+    var result = _primeService.IsPrime(value);
+
+    Assert.False(result, $"{value} should not be prime");
+}
+
+Porém, a versão aplicada nesse projeto do Xunit com o Microsoft.VisualStudio.TestPlatform.MSTest não está permitindo usar essa prática, por esse motivo os testes foram implementados de maneira a chamadas únicas para cada método.
