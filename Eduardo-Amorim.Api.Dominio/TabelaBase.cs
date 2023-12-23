@@ -1,5 +1,8 @@
-﻿namespace Eduardo_Amorim.Api.Dominio
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Eduardo_Amorim.Api.Dominio
 {
+    [ExcludeFromCodeCoverage]
     public class TabelaBase
     {
         private readonly decimal _valorPagoSobreCDI = 1.08m;
