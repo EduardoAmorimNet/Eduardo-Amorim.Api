@@ -2,6 +2,7 @@
 using Eduardo_Amorim.Api.Dominio;
 using Eduardo_Amorim.Api.Model;
 using Eduardo_Amorim.Api.Model.Input;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
