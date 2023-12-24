@@ -34,7 +34,9 @@ Porém, a versão aplicada nesse projeto do Xunit com o Microsoft.VisualStudio.T
 A aplicação está rodando por default na porta: 4200
 Caso tenha você tenha alguma aplicação rodando nessa porta é necessário alterar a configuração do projeto para não gerar conflito.
 
-Para executar o projeto basta usar o comando: ng serve
-Caso queira executar direto no seu navegador padrão: ng serve --open
+Para executar o projeto basta usar o comando: npm run start
+
+Duvida: Mas o comando convencional para gerar o Angular não é o "ng serve"?
+Resposta: Sim, porém, estou habilitando o cors via Angular para receber qualquer chamada bidirecional, sem precisar de injetar no back-end configurações do cors. Para que isso funcione o Angular precisa buscar o arquivo de configuração que criei chamado "proxy.conf.json"; Esse que habilitar o Cors inteiramente no front sem dependência do back-end.
 
 Se em sua máquina estiver faltando alguma biblioteca basta usar o comando:npm install ou npm install --force
