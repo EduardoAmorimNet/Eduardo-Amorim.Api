@@ -35,6 +35,7 @@ A aplicação está rodando por default na porta: 4200
 Caso tenha você tenha alguma aplicação rodando nessa porta é necessário alterar a configuração do projeto para não gerar conflito.
 
 Para executar o projeto basta usar o comando: npm run start
+Basta executar no seguinte caminho: {SEU DIRETORIO DO PROJETO}\Eduardo Alves Amorim\Eduardo-Amorim-Front
 
 Duvida: Mas o comando convencional para gerar o Angular não é o "ng serve"?
 Resposta: Sim, porém, estou habilitando o cors via Angular para receber qualquer chamada bidirecional, sem precisar de injetar no back-end configurações do cors. Para que isso funcione o Angular precisa buscar o arquivo de configuração que criei chamado "proxy.conf.json"; Esse que habilitar o Cors inteiramente no front sem dependência do back-end.
