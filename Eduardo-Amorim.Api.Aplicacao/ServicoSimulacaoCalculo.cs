@@ -23,8 +23,7 @@ namespace Eduardo_Amorim.Api.Aplicacao
         /// <exception cref="InternalServerErrorException">Exceção personalizada do tipoInternalServerErrorException</exception>
         public Task<CalculoCDB> SimulacaoCalculoCDB(decimal valorMonetario, int prazoEmMeses)
         {
-            if (ValidarDadosSimulacao(valorMonetario, prazoEmMeses))
-                throw new CustomException("O Valor ou Prazo em Meses informado é inválido");
+            ValidarDadosSimulacao(valorMonetario, prazoEmMeses);
 
             try
             {
@@ -68,11 +67,12 @@ namespace Eduardo_Amorim.Api.Aplicacao
             }
         }
 
-        public bool ValidarDadosSimulacao(decimal valorMonetario, int prazoEmMeses)
+        public void ValidarDadosSimulacao(decimal valorMonetario, int prazoEmMeses)
         {
-            if (valorMonetario <= 0 || prazoEmMeses < 1)
-                return true;
-            else return false;
+            if (valorMonetario <= 0)
+                throw new CustomException("O Valor informado deve ser maior que 0");
+            if (prazoEmMeses < 1)
+                throw new CustomException("A quantidades de meses informado deve ser maior que 1");
         }
     }
 }
