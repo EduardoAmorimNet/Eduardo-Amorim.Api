@@ -71,7 +71,7 @@ namespace Eduardo_Amorim.Api.Aplicacao
         {
             if (valorMonetario <= 0)
                 throw new CustomException("O Valor informado deve ser maior que 0");
-            if (prazoEmMeses < 1)
+            if (prazoEmMeses <= 1)
                 throw new CustomException("A quantidades de meses informado deve ser maior que 1");
         }
     }
