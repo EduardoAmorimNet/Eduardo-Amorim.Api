@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
 
     this.formularioSimulacao = this.formBuilder.group({
       valor: [null, [Validators.required, this.maiorQueZeroValidador()]],
-      mes: [null, [Validators.required, this.maiorQueZeroValidador()]]
+      mes: [null, [Validators.required, this.maiorQueUmValidador()]]
     });
 
     this.request = new CalculoRequest();
@@ -36,6 +36,14 @@ export class AppComponent implements OnInit{
       const value = control.value;
       
       return value !== null && value > 0 ? null : { 'maiorQueZero': true };
+    };
+  }
+  
+  maiorQueUmValidador(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+      
+      return value !== null && value > 1 ? null : { 'maiorQueZero': true };
     };
   }
   
@@ -53,10 +61,11 @@ export class AppComponent implements OnInit{
       
       this.appService.simularCalculoCDB(this.request)
         .subscribe(sucess => {
-          this.result.resultadoBruto = sucess.resultadoBruto;
-          this.result.resultadoLiquido = sucess.resultadoLiquido;
+          this.result.resultadoBruto = parseFloat(sucess.resultadoBruto.toFixed(2));
+          this.result.resultadoLiquido = parseFloat(sucess.resultadoLiquido.toFixed(2));
           this.result.moedaReal = sucess.moedaReal;
           this.result.unidadeMonetaria = sucess.unidadeMonetaria;
+		  
           this.refresh(true);
       },
       error => {
