@@ -1,5 +1,6 @@
 using Eduardo_Amorim.Api.Aplicacao;
 using Eduardo_Amorim.Api.Aplicacao.Interfaces;
+using Microsoft.AspNetCore.Server.HttpSys;
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: ExcludeFromCodeCoverage]
@@ -22,8 +23,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
